@@ -1,6 +1,36 @@
 <html>
+  <head>
+    <script>
+      
+    document.getElementById("banner").addEventListener("click", function() {
+  openFullscreen();
+});
+      
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+</script>
+
+  </head>
   <div>
-    <img src="banner1.PNG" width="100%" height="auto">
+    <img id="banner" src="banner1.PNG" width="100%" height="auto">
   </div>
   <div>
   <iframe src="https://toffee888.github.io/88/" height="100%" width="100%" title="AR Photo Contest" allow="camera *" crossorigin="anonymous"></iframe>
